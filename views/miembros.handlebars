@@ -1,0 +1,9 @@
+<h1>Nuestro Equipo</h1>
+{{#each miembros}}
+    <div class="miembro">
+        <h2>{{nombre}} {{apellidos}}</h2>
+        <p>{{titulo}}</p>
+        <p>Tecnologías: {{tecnologias}}</p>
+        <a href="/miembros/{{idMiembro}}">Ver perfil completo</a>
+    </div>
+{{/each}}
