@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="/images/InFo+ TiK.jpg" alt="Logo" class="logo"> <!-- Reemplaza con la ruta correcta -->
-        </div>
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Menú lateral -->
         <nav>
+            <div class="logo-container">
+                <img src="/images/InFo+ TiK.jpg" alt="Logo InFo+ TiK" class="logo">
+            </div>
             <ul>
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/miembros">Equipo</a></li>
@@ -19,14 +21,14 @@
                 <li><a href="/contact">Contacto</a></li>
             </ul>
         </nav>
-    </header>
 
-    <div class="main-container">
+        <!-- Contenido principal -->
         <main>
             {{{body}}}
         </main>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 InFo+ TiK. Todos los derechos reservados.</p>
     </footer>

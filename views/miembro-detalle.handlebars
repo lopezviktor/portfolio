@@ -1,8 +1,17 @@
-<h1>Perfil de {{miembro.nombre}} {{miembro.apellidos}}</h1>
-<div class="miembro-detalle">
-    <p><strong>Título:</strong> {{miembro.titulo}}</p>
-    <p><strong>Email:</strong> {{miembro.email}}</p>
-    <p><strong>Tecnologías:</strong> {{miembro.tecnologias}}</p>
-    <!-- Puedes añadir más detalles aquí según la estructura de tu base de datos -->
-</div>
-<a href="/miembros">Volver al listado de miembros</a>
+<section id="miembro-detalle">
+    <h1 class="title">Perfil de {{miembro.nombre}} {{miembro.apellidos}}</h1>
+    <div class="miembro-detalle">
+        <p><strong>Título:</strong> {{miembro.titulo}}</p>
+        <p><strong>Email:</strong> {{miembro.email}}</p>
+        <p><strong>Tecnologías:</strong></p>
+        <ul class="tecnologias">
+            {{#each miembro.tecnologias}}
+            <li class="tecnologia-item">
+                <img src="/images/logos/{{this.id}}.png" alt="{{this.nombre}} logo" class="tech-logo">
+                <span class="nivel-texto">{{this.nivel}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <a href="/miembros" class="button">Volver al listado de miembros</a>
+</section>
