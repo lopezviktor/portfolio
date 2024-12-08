@@ -1,9 +1,18 @@
-<h1>Nuestro Equipo</h1>
-{{#each miembros}}
-    <div class="miembro">
-        <h2>{{nombre}} {{apellidos}}</h2>
-        <p>{{titulo}}</p>
-        <p>Tecnologías: {{tecnologias}}</p>
-        <a href="/miembros/{{idMiembro}}">Ver perfil completo</a>
+<section id="miembros">
+    <h1 class="title">Nuestro Equipo</h1>
+    <div class="miembro-lista">
+        {{#each miembros}}
+            <div class="miembro">
+                <h2 class="miembro-nombre">{{nombre}} {{apellidos}}</h2>
+                <p class="miembro-titulo">{{titulo}}</p>
+                <p><strong>Tecnologías:</strong></p>
+                <ul class="miembro-tecnologias">
+                    {{#each tecnologias}}
+                    <li>{{nombre}}</li>
+                    {{/each}}
+                </ul>
+                <a href="/miembros/{{idMiembro}}" class="button">Ver perfil completo</a>
+            </div>
+        {{/each}}
     </div>
-{{/each}}
+</section>

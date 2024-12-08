@@ -15,14 +15,15 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const miembro = await Miembro.getById(req.params.id);
+    console.log('Datos del miembro enviados a la plantilla:', miembro);
     if (miembro) {
-      res.render('miembro-detalle', { title: `Perfil de ${miembro.nombre}`, miembro });
+      res.render('miembro-detalle', { miembro });
     } else {
       res.status(404).send('Miembro no encontrado');
     }
   } catch (err) {
     console.error(err);
-    res.status(500).send('Server Error');
+    res.status(500).send('Error del servidor');
   }
 });
 
