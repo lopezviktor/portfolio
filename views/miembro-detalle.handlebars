@@ -9,6 +9,8 @@
             <li class="tecnologia-item">
                 <img src="/images/logos/{{this.id}}.png" alt="{{this.nombre}} logo" class="tech-logo">
                 <span class="nivel-texto">{{this.nivel}}</span>
+                <!-- Barra de progreso -->
+                <progress class="tech-progress" value="{{this.porcentaje}}" max="100"></progress>
             </li>
             {{/each}}
         </ul>

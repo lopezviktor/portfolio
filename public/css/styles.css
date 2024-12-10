@@ -146,6 +146,7 @@ h3 {
     font-size: 18px; /* Tamaño del texto del nivel */
     color: #e0e0e0; /* Texto gris claro */
     font-weight: bold;
+    width: 100px;
 }
 
 /* Botones */
@@ -177,4 +178,36 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+
+/*-------------------------------*/
+
+.miembro-detalle {
+    display: flex;
+    flex-direction: column;
+}
+
+.tecnologias {
+    list-style: none;
+    padding: 0;
+}
+
+.tecnologia-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tech-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.tech-progress {
+    width: 500px;
+    height: 20px;
+    margin-left: 20px;
+    /*background-color: green;*/
 }
