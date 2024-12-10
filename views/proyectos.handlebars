@@ -6,8 +6,16 @@
             <h2 class="proyecto-titulo">{{titulo}}</h2>
             <p class="proyecto-descripcion">{{descripcion}}</p>
             <p><strong>Cliente:</strong> {{cliente}}</p>
-            <p><strong>Tecnologías:</strong> {{tecnologias}}</p>
-            <p><strong>Fecha:</strong> {{diaInicio}} - {{diaFin}}</p>
+            <p><strong>Tecnologías:</strong></p>
+            <div class="proyecto-tecnologias">
+                {{#each tecnologias}}
+                <div class="proyecto-tecnologia-item">
+                    <img src="/images/logos/{{this.id}}.png" alt="{{this.nombre}}" class="proyecto-tech-logo">
+                    <span>{{this.nombre}}</span>
+                </div>
+                {{/each}}
+            </div>
+            <p><strong>Fecha:</strong> {{formatearFecha diaInicio}} - {{formatearFecha diaFin}}</p>
         </div>
         {{/each}}
     </div>
