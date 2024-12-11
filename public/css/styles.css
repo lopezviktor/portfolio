@@ -8,6 +8,16 @@ body {
     color: #ffffff; /* Texto principal blanco */
     display: flex; /* Asegura que el cuerpo ocupe todo el viewport */
     min-height: 100vh; /* Ocupa la altura total de la ventana */
+
+}
+
+.imgHome {
+    position: fixed; /* Fija la posición respecto a la ventana */
+    bottom: 10px;    /* Separación desde el borde inferior */
+    right: 10px;     /* Separación desde el borde derecho */
+    width: 100px;    /* Tamaño de la imagen */
+    height: auto;    /* Mantiene la proporción de la imagen */
+    z-index: 100;     /* Asegura que esté sobre otros elementos */
 }
 
 /* Contenedor principal */
