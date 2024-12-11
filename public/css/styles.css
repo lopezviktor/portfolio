@@ -1,77 +1,103 @@
-/* Configuración general */
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #0a192f; /* Fondo oscuro principal */
-    color: #ffffff; /* Texto principal blanco */
-    display: flex; /* Asegura que el cuerpo ocupe todo el viewport */
-    min-height: 100vh; /* Ocupa la altura total de la ventana */
+    background-color: #0a192f; 
+    color: #ffffff; 
+    display: flex; 
+    min-height: 100vh; 
 
 }
 
 .imgHome {
-    position: fixed; /* Fija la posición respecto a la ventana */
-    bottom: 10px;    /* Separación desde el borde inferior */
-    right: 10px;     /* Separación desde el borde derecho */
-    width: 100px;    /* Tamaño de la imagen */
-    height: auto;    /* Mantiene la proporción de la imagen */
-    z-index: 100;     /* Asegura que esté sobre otros elementos */
+    position: fixed; 
+    bottom: 10px;    
+    right: 10px;     
+    width: 100px;    
+    height: auto;    
+    z-index: 100;     
 }
 
-/* Contenedor principal */
+
 .main-container {
     display: flex;
-    flex-direction: row; /* Layout horizontal para incluir el menú lateral */
-    width: 100%; /* Asegura que ocupa todo el ancho */
+    flex-direction: row; 
+    width: 100%; 
 }
-
-/* Contenedor del logo */
-.logo-container {
+.logo-principal{
     display: flex;
-    justify-content: center; /* Centra horizontalmente el logo */
-    align-items: center; /* Centra verticalmente el logo */
-    margin-bottom: 20px; /* Espaciado entre el logo y el menú */
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 20px; 
     width: 100%;
     padding: 10px;
 }
 
-/* Estilo del logo */
-.logo {
-    border-radius: 50%; /* Hace que el logo sea circular */
-    width: 80%; /* Tamaño del logo relativo al contenedor */
-    max-width: 150px; /* Tamaño máximo del logo */
-    height: auto; /* Mantiene las proporciones */
+
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 50px; 
+    padding: 10px;
+}
+.logo-container img{
+    border-radius: 20px;
+    
 }
 
-/* Menú lateral */
+.logo-container-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 250px;
+    margin-bottom: 50px; 
+    padding: 10px;
+}
+.logo-container-contacto img{
+    border-radius: 20px;
+}
+
+
+.logo {
+    border-radius: 50%; 
+    width: 80%; 
+    max-width: 150px; 
+    height: auto; 
+    border: 2px solid #64ffda; 
+}
+
+
 nav {
     width: 200px;
-    background-color: #112240; /* Fondo del menú lateral */
-    color: #ffffff; /* Color principal del texto */
+    background: linear-gradient(to bottom, #2d4876, #060e1f);
+    color: #ffffff; 
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Sombra lateral */
-    height: 100vh; /* Asegura que ocupa toda la altura */
-    position: fixed; /* Hace que el menú permanezca fijo al desplazarse */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); 
+    height: 100vh; 
+    position: fixed; 
     top: 0;
     left: 0;
 }
 
-/* Contenido principal */
+
 main {
-    margin-left: 250px; /* Deja espacio para el menú lateral */
-    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+    margin-left: 250px; 
+    flex-grow: 1; 
     padding: 40px;
-    background-color: #0a192f; /* Fondo oscuro del contenido */
+    padding-top: 5px;
+    background-color: #0a192f; 
     color: #ffffff;
-    overflow-y: auto; /* Habilita scroll si es necesario */
+    overflow-y: auto; 
 }
 
-/* Navegación */
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -83,7 +109,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff; /* Color de los enlaces (blanco) */
+    color: #ffffff; 
     text-decoration: none;
     font-size: 18px;
     text-align: center;
@@ -93,19 +119,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #233554; /* Fondo de hover */
-    color: #e0e0e0; /* Color de texto en hover (gris claro) */
-    border-left: 4px solid #64ffda; /* Indicador de selección */
+    background-color: #233554; 
+    color: #e0e0e0; 
+    border-left: 4px solid #64ffda; 
 }
 
-/* Títulos */
+
 h2, h3 {
-    color: #77dbf1; /* Color blanco */
+    color: #77dbf1; 
     font-weight: bold;
 }
 
 h1 {
-    font-size: 2.5rem; /* Títulos más grandes */
+    font-size: 2.5rem; 
     margin-bottom: 10px;
     color: white;
     font-weight: bold;
@@ -123,8 +149,9 @@ h3 {
 
 .miembro{
     margin-bottom: 50px;
+    margin-right: 20%;
 }
-/* Estilo de las tecnologías */
+
 .tecnologias {
     list-style: none;
     padding: 0;
@@ -136,36 +163,36 @@ h3 {
     align-items: center;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #112240; /* Fondo de cada tecnología */
+    background-color: #112240; 
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
 .tecnologia-item:hover {
-    transform: translateY(-5px); /* Efecto hover */
+    transform: translateY(-5px); 
     background-color: #233554;
 }
 
 .tech-logo {
-    width: 60px; /* Tamaño del logo */
+    width: 60px; 
     height: auto;
     margin-right: 15px;
 }
 
 .nivel-texto {
-    font-size: 18px; /* Tamaño del texto del nivel */
-    color: #e0e0e0; /* Texto gris claro */
+    font-size: 18px; 
+    color: #e0e0e0; 
     font-weight: bold;
     width: 100px;
 }
 
-/* Botones */
+
 a.button {
     display: inline-block;
-    background-color: transparent; /* Fondo transparente */
-    color: #ffffff; /* Texto blanco */
-    border: 2px solid #64ffda; /* Borde azul claro */
-    border-radius: 10px; /* Bordes más redondeados */
+    background-color: transparent; 
+    color: #ffffff; 
+    border: 2px solid #64ffda; 
+    border-radius: 10px; 
     padding: 10px 20px;
     text-decoration: none;
     font-size: 16px;
@@ -173,25 +200,32 @@ a.button {
 }
 
 a.button:hover {
-    background-color: #233554; /* Fondo de hover más oscuro */
-    color: #64ffda; /* Texto azul claro */
-    border-color: #64ffda; /* Borde azul claro */
+    background-color: #233554; 
+    color: #64ffda; 
+    border-color: #64ffda; 
 }
 
-/* Footer */
+
 footer {
-    background-color: #112240;
-    color: #e0e0e0; /* Texto gris claro */
-    text-align: center;
+    background: linear-gradient(to top, #2d4876, #060e1f);
+    color: #e0e0e0; 
+    text-align: end;
     padding: 1rem;
     font-size: 14px;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+footer p{
+    margin-right: 50px;
+}
 
 
-/*-------------------------------*/
+
+
+.proyecto{
+    margin-right: 20%;
+}
 
 .miembro-detalle {
     display: flex;
@@ -219,10 +253,10 @@ footer {
     width: 500px;
     height: 20px;
     margin-left: 20px;
-    /*background-color: green;*/
+    
 }
 
-/*-------------------------*/
+
 
 .proyecto-detalle {
     display: flex;
@@ -255,5 +289,93 @@ footer {
 .proyecto-tech-logo {
     width: 40px; 
     height: 40px;
-    object-fit: contain; /* Ajusta bien el logo */
+    object-fit: contain; 
+}
+
+@media (max-width: 768px) {
+    
+    nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        box-shadow: none;
+        background: linear-gradient(to bottom, #133d86, #060e1f);
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    
+    main {
+        margin-left: 0; 
+        padding: 20px; 
+    }
+
+    
+    .main-container {
+        flex-direction: column; 
+    }
+
+    
+    .imgHome {
+        width: 60px; 
+    }
+
+    
+    h1 {
+        font-size: 1.8rem; 
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    
+    a.button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    
+    .tecnologia-item,
+    .proyecto-tecnologia-item {
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .tech-logo,
+    .proyecto-tech-logo {
+        width: 30px;
+    }
+
+    .tecnologia-item {
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px; 
+    }
+
+    .tech-logo {
+        width: 50px; 
+        height: auto;
+    }
+
+    .tech-progress {
+        width: 90%; 
+        height: 15px; 
+    }
+    footer{
+        text-align: center;
+    }
 }
